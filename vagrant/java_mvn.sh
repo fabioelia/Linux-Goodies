@@ -15,7 +15,7 @@ wget --no-check-certificate https://github.com/aglover/fabioelia/Linux-Goodies/r
 
 wget --no-check-certificate --no-cookies - --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jdk-7u51-linux-x64.tar.gz -P /opt/ 
 
-tar -xvf /opt/7u51-b13/jdk-7u51-linux-x64.tar.gz
+tar -xvf /opt/jdk-7u51-linux-x64.tar.gz
 
 sudo mkdir -p /usr/lib/jvm
 sudo mv /opt/jdk1.7.* /usr/lib/jvm/jdk1.7.0
