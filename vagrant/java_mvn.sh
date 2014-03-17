@@ -11,7 +11,7 @@ https://github.com/fabioelia/Linux-Goodies
 apt-get update -y
 apt-get install openjdk-7-jdk unzip -y
 
-wget --no-check-certificate https://github.com/aglover/fabioelia/Linux-Goodies/raw/master/vagrant/base.sh && bash base.sh
+wget --no-check-certificate https://raw.github.com/fabioelia/Linux-Goodies/master/vagrant/base.sh && bash base.sh
 
 wget --no-check-certificate --no-cookies - --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jdk-7u51-linux-x64.tar.gz -P /opt/ 
 
@@ -29,9 +29,6 @@ sudo chmod a+x /usr/bin/javac
 sudo chmod a+x /usr/bin/javaws
 sudo chown -R root:root /usr/lib/jvm/jdk1.7.0
 
-rm jdk-7u51-linux-x64.tar.gz
-rm base.sh
-
 java -version
  
 # Maven
@@ -40,3 +37,7 @@ sudo -u vagrant tar -xvzf /opt/apache-maven-2.2.1-bin.tar.gz
 
 # Add Maven to PATH
 sudo -u vagrant echo export PATH=/opt/apache-maven-2.2.1:\$PATH >> /home/vagrant/.bashrc
+
+# rm jdk-7u51-linux-x64.tar.gz
+rm base.sh
+rm java_mvn.sh
