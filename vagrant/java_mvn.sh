@@ -6,14 +6,12 @@
 # Licence: MIT
 # source: http://www.christopherbiscardi.com/2014/03/08/getting-started-with-robolectric-headless-android-testing-with-vagrant/
 
-https://github.com/fabioelia/Linux-Goodies
-
-apt-get update -y
-apt-get install openjdk-7-jdk unzip -y
+sudo apt-get install openjdk-7-jdk unzip -y
+sudo aptitude install postgresql
 
 wget --no-check-certificate https://raw.github.com/fabioelia/Linux-Goodies/master/vagrant/base.sh && bash base.sh
 
-wget --no-check-certificate --no-cookies - --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jdk-7u51-linux-x64.tar.gz -P /opt/ 
+# wget --no-check-certificate --no-cookies - --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jdk-7u51-linux-x64.tar.gz -P /opt/ 
 
 tar -xvf /opt/jdk-7u51-linux-x64.tar.gz
 
@@ -32,11 +30,11 @@ sudo chown -R root:root /usr/lib/jvm/jdk1.7.0
 java -version
  
 # Maven
-sudo -u vagrant wget http://archive.apache.org/dist/maven/binaries/apache-maven-2.2.1-bin.tar.gz -P /opt/
-sudo -u vagrant tar -xvzf /opt/apache-maven-2.2.1-bin.tar.gz
+sudo wget http://archive.apache.org/dist/maven/binaries/apache-maven-2.2.1-bin.tar.gz -P /opt/
+sudo tar -xvzf /opt/apache-maven-2.2.1-bin.tar.gz
 
 # Add Maven to PATH
-sudo -u vagrant echo export PATH=/opt/apache-maven-2.2.1:\$PATH >> /home/vagrant/.bashrc
+sudo -u vagrant echo export PATH=/opt/apache-maven-2.2.1:\$PATH >> /home/vagrant/bin/.bashrc
 
 # rm jdk-7u51-linux-x64.tar.gz
 rm base.sh

@@ -7,7 +7,7 @@
 
 sudo apt-get update -y
 
-sudo apt-get install build-essential rsync screen -y
+sudo apt-get install build-essential rsync screen vim -y
 sudo apt-get install strace tcpdump -y
 sudo apt-get install libssl-dev zlib1g-dev libcurl3-dev libxslt-dev -y
 sudo apt-get install lib32z1-dev bison flex lib32ncurses5-dev libx11-dev gperf g++-multilib -y
